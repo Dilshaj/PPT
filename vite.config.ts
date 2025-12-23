@@ -1,5 +1,5 @@
 export default defineConfig({
-  base: '/PPT/',   // 👈 THIS IS THE KEY (repo name)
+  base: '/PPT/',  // 👈 THIS IS THE KEY (repo name)
   plugins: [
     react(),
     tailwindcss(),
