@@ -1,15 +1,19 @@
-name: Deploy React Vite App
+name: Deploy Vite App to GitHub Pages
 
 on:
   push:
     branches:
       - master
+
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -18,16 +22,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
 
-      - name: Deploy to EC2
-        uses: appleboy/scp-action@v0.1.7
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_KEY }}
-          source: "dist/*"
-          target: "/var/www/html"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
