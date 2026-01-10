@@ -1,19 +1,25 @@
 pipeline {
     agent any
+
     tools {
         nodejs 'NodeJS'
     }
+
     stages {
+
         stage('Install') {
             steps {
                 sh 'npm install'
             }
         }
+
         stage('Build') {
             steps {
+                sh 'chmod +x node_modules/.bin/vite'
                 sh 'npm run build'
             }
         }
+
         stage('Run') {
             steps {
                 sh '''
@@ -22,5 +28,6 @@ pipeline {
                 '''
             }
         }
+
     }
 }
