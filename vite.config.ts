@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 export default defineConfig({
-  base: '/PPT/',
+  base: '/',   // ✅ Vercel fix
   plugins: [
     react(),
     tailwindcss(),
@@ -15,4 +15,3 @@ export default defineConfig({
     },
   },
 })
-
