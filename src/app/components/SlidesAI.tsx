@@ -40,7 +40,11 @@ export function Slide16() {
       <div className="max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center mb-6">
           <div className="inline-flex items-center gap-2 bg-purple-100 px-4 py-1.5 rounded-full mb-3 border border-purple-300">
-            <ImageWithFallback src="/logo.png" alt="Logo" className="w-5 h-5 object-contain" />
+            <ImageWithFallback
+  src="/ppt/logo.png"
+  alt="EDUPROVA Logo"
+  className="w-5 h-5 object-contain"
+/>
             <span className="text-sm font-semibold text-purple-600" style={{ fontFamily: 'Inter, sans-serif' }}>AI RESUME BUILDER</span>
           </div>
           <h2 className="text-4xl font-black text-gray-900 mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Voice-to-Resume AI</h2>
