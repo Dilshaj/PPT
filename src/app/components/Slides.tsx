@@ -49,7 +49,11 @@ export function Slide12() {
       <div className="max-w-7xl mx-auto w-full">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-cyan-100 px-4 py-1.5 rounded-full mb-3 border border-cyan-200">
-            <ImageWithFallback src="/logo.png" alt="Logo" className="w-5 h-5 object-contain" />
+            <ImageWithFallback
+  src="/ppt/logo.png"
+  alt="EDUPROVA Logo"
+  className="w-5 h-5 object-contain"
+/>
             <span className="text-sm font-semibold text-cyan-700" style={{ fontFamily: 'Inter, sans-serif' }}>COMMUNICATION</span>
           </div>
           <h2 className="text-5xl font-black text-gray-900 mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Seamless Communication</h2>
