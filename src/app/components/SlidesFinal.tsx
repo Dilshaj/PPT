@@ -32,7 +32,11 @@ export function Slide20() {
       <div className="max-w-7xl mx-auto h-full flex flex-col">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-blue-100 px-5 py-2 rounded-full mb-3">
-            <ImageWithFallback src="/logo.png" alt="Logo" className="w-5 h-5 object-contain" />
+           <ImageWithFallback
+  src="/ppt/logo.png"
+  alt="EDUPROVA Logo"
+  className="w-5 h-5 object-contain"
+/>
             <span className="text-sm font-bold text-blue-600" style={{ fontFamily: 'Inter, sans-serif' }}>SYSTEM ARCHITECTURE</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Scalable Architecture Flow</h2>
